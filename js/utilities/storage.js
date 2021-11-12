@@ -1,0 +1,41 @@
+const tokenKey = "token";
+const userKey = "user";
+
+//User info
+
+export const saveToken = token => {
+  saveStorage(tokenKey, token);
+};
+export const getToken = () => {
+  return getStorage(tokenKey);
+};
+export const saveUser = user => {
+  saveStorage(userKey, user);
+};
+
+export const getUsername = () => {
+  const user = getStorage(userKey);
+  if (user) {
+    return user.username;
+  }
+  return null;
+};
+
+export const clearStorage = () => {
+  localStorage.removeItem(tokenKey);
+  localStorage.removeItem(userKey);
+};
+
+//Local storage
+const saveStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
+
+const getStorage = key => {
+  const value = localStorage.getItem(key);
+
+  if (!value) {
+    return [];
+  }
+  return JSON.parse(value);
+};

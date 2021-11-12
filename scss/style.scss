@@ -1,0 +1,10 @@
+@import "partials/custom";
+@import "partials/card";
+@import "partials/layout";
+@import "partials/navbar";
+
+body {
+  background: $color-dark-tertiary;
+  margin: 0;
+  padding: 0;
+}

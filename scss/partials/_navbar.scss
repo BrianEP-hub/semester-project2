@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-dark-primary;
+  padding: 1rem;
+  &-menu {
+    padding: 1rem;
+    &-item {
+      margin-left: 0.375rem;
+      text-transform: uppercase;
+      padding: 0.75rem;
+      background-color: $color-main-secondary;
+      color: $color-text-primary;
+      text-decoration: none;
+      border-radius: 0.25rem;
+    }
+  }
+}
