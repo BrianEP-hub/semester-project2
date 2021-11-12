@@ -28,17 +28,13 @@ createMenu();
   }
 
   container.innerHTML = `
-                        <div class="container-details-product">
-                            <div class="card-image">
-                            <img src="${productImg}" alt="${details.title}" />    
-                            
-                            </div>
-                            <div class="card-content">
-                                <h3>${details.title}</h3>
+                        
+                            <img src="${productImg}" alt="${details.title}" class="product-image" />    
+                            <div class="details-content">
+                                <h3 details-content-header>${details.title}</h3>
                                 <p>${details.description}</p>
                                 <p>Price: ${details.price}</p>
-                            </div>
-                            <div class="card-buttons">
+                              <div class="details-buttons">
                                 <button class="cart-button"
                                  data-id="${details.id}"
                                  data-title="${details.title}"
@@ -46,7 +42,8 @@ createMenu();
                                  data-image="${productImg}">
                                  Add to cart
                                 </button>
+                              </div>
                             </div>
-                        </div>
+                     
     `;
 })();

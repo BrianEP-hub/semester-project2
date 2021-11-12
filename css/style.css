@@ -50,6 +50,22 @@
   border-radius: 0.25rem;
 }
 
+.container-details {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.product-image {
+  max-height: 300px;
+}
+
+.details-content {
+  color: rgba(255, 255, 255, 0.67);
+  padding: 1rem;
+  width: 30%;
+}
+
 body {
   background: #242424;
   margin: 0;
