@@ -21,7 +21,7 @@ export const getProduct = product => {
                                         <p>Price: ${product.price} NOK</p>
                                         <a class="card-content-action" href="details.html?id=${product.id}">
                                         View more
-                                        </a>                
+                                        </a>         
                                         </div>
                                     </div>
                               </div>

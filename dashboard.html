@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -12,13 +12,47 @@
     <div class="container-admin"></div>
     <div></div>
     <div class="container">
-      <div class="container-message"></div>
+      
       <div class="container-products"></div>
     </div>
-    <div class="add-products-modal"></div>
-    <div class="edit-products-modal"></div>
+    <div class="modal-add-products">
+      <div class="modal-add-products-content">
+        <span class="close">&times;</span>
+        <h2>Add product</h2>
+        
+        <form id="addProduct">
+          <div class="container-message"></div>
+          <div>
+            <label for="name">Product name</label>
+            <input id="name" type="text" />
+          </div>
+          <div>
+            <label for="name">Price</label>
+            <input id="price" type="number" />
+          </div>
+          <div>
+            <label for="description">Product description</label>
+            <textarea id="description"></textarea>
+          </div>
+          <div>
+            <label for="image">Image</label>
+            <input id="image" type="file" />
+            <input type="url" id="image-url"/>
+          </div>
+          <div>
+            <label for="featured">Featured</label>
+            <select name="featured" id="featured">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <button class="button-add">Add</button>
+        </form>
+    </div>
+    <div class="modal-edit-products"></div>
     <script src="js/index.js" type="module"></script>
     <script src="js/components/adminPage.js" type="module"></script>
+    <script src="js/utilities/addProduct.js" type="module"></script>
     <noscript>Please ensure that you have JavaScript enabled.</noscript>
   </body>
 </html>
