@@ -21,11 +21,6 @@ export const getUsername = () => {
   return null;
 };
 
-export const clearStorage = () => {
-  localStorage.removeItem(tokenKey);
-  localStorage.removeItem(userKey);
-};
-
 //Local storage
 const saveStorage = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
@@ -38,4 +33,8 @@ const getStorage = key => {
     return [];
   }
   return JSON.parse(value);
+};
+export const clearStorage = () => {
+  localStorage.removeItem(tokenKey);
+  localStorage.removeItem(userKey);
 };

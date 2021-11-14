@@ -1,12 +1,7 @@
 import { baseUrl } from "../settings/api.js";
 import { displayMessage } from "../common/displayMessage.js";
 import createMenu from "../utilities/createMenu.js";
-import {
-  saveToken,
-  saveUser,
-  getToken,
-  clearStorage,
-} from "../utilities/storage.js";
+import { saveToken, saveUser, getToken } from "../utilities/storage.js";
 
 createMenu();
 const token = getToken();
@@ -28,7 +23,7 @@ const submitForm = e => {
     return displayMessage(
       "warning",
       "Please enter username/password",
-      ".message-container",
+      ".container-message",
     );
   }
   login(userValue, pwdValue);
@@ -58,19 +53,17 @@ const login = async (username, password) => {
     if (data.user) {
       saveToken(data.jwt);
       saveUser(data.user);
+
+      location.href = "/dashboard.html";
     }
     if (data.error) {
       displayMessage(
         "warning",
         "Username/password is not correct",
-        ".message-container",
+        ".container-message",
       );
     }
   } catch (error) {
     console.dir(error);
   }
-};
-
-export const logout = () => {
-  clearStorage();
 };

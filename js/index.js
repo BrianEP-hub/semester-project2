@@ -8,7 +8,6 @@ const heroUrl = baseUrl + "/home";
 const productsUrl = baseUrl + "/products";
 
 createMenu();
-
 (async () => {
   try {
     const response = await fetch(heroUrl);

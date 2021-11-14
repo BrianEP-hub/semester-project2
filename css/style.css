@@ -26,6 +26,7 @@
 
 .container-products, .container-featured {
   display: flex;
+  justify-content: center;
 }
 
 .navbar {
@@ -44,10 +45,21 @@
   margin-left: 0.375rem;
   text-transform: uppercase;
   padding: 0.75rem;
-  background-color: #c651cd;
+  background-color: #8439f9;
   color: rgba(255, 255, 255, 0.96);
   text-decoration: none;
   border-radius: 0.25rem;
+}
+
+.navbar-menu-item:hover {
+  background-color: #c651cd;
+}
+
+.navbar-menu-item-auth {
+  background-color: #8439f9;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-left: 0.375rem;
 }
 
 .container-details {
@@ -57,10 +69,13 @@
 }
 
 .product-image {
-  max-height: 300px;
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+  height: 300px;
 }
 
 .details-content {
+  background-color: #1b1b1b;
   color: rgba(255, 255, 255, 0.67);
   padding: 1rem;
   width: 30%;

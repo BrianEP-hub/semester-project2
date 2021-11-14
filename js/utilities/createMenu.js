@@ -11,10 +11,9 @@ const createMenu = () => {
   }">Login</a>`;
 
   if (username) {
-    authLink = `Logged in as: <a href="dashboard.html" class="navbar-menu-item-auth ${
+    authLink = `<a href="dashboard.html" class="navbar-menu-item-auth ${
       pathname === "/dashboard.html" ? "active" : ""
     }">${username}</a>
-    <button class="navbar-menu-button-logout navbar-item-auth" id="logout">Log out</button>
     `;
   }
 
