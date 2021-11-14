@@ -23,8 +23,28 @@
             <label for="price">Price</label>
             <input id="price" />
           </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+          </div>
+          <div>
+            <label for="featured">Featured</label>
+            <select id="featured">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <input id="id" type="hidden" />
+
+          <div>
+            <button id="update" class="update">Update</button>
+          </div>
+
+          <div class="container-delete"></div>
         </form>
       </div>
     </div>
+
+    <script src="js/utilities/editProduct.js" type="module"></script>
   </body>
 </html>
